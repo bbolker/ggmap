@@ -251,7 +251,7 @@ get_stamenmap <- function(
       get_stamenmap_tile(maptype, zoom, v[1], v[2], color, force = force, messaging = messaging, https = https)
     }
   )
-
+  names(listOfTiles) <- seq(nrow(tilesNeeded))
 
   # stitch tiles together
   map <- stitch(listOfTiles)
